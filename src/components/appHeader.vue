@@ -23,16 +23,16 @@ export default {
 @use '../styles/partials/_mixins.scss' as *;
 
 .logo {
-    max-width: 10%;
+    max-width: 5%;
     margin-right: 20px;
     margin-left: 20px;
+    margin-top: 20px;
     float: left;
 
 }
 
 .title {
     font-size: 40px;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
 }
 </style>

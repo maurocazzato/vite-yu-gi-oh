@@ -38,7 +38,7 @@ export default {
 <template>
     <div class="selectbar">
         <select v-model="store.searchText" id="archetypeSelect">
-            <option value="">Tutti gli Archetipi</option>
+            <option value="">Tutte le tipologie</option>
             <option v-for="(archetype, index) in store.archetypes" :key="index" :value="archetype">
                 {{ archetype }}
             </option>

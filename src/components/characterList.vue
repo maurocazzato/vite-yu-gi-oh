@@ -6,6 +6,7 @@ export default {
   name: "characterList",
   components: {
     card,
+
   },
   data() {
     return {

@@ -1,6 +1,8 @@
 <script>
 import appHeader from './components/appHeader.vue';
 import characterList from './components/characterList.vue';
+import appSelect from './components/appSelect.vue';
+
 
 
 export default {
@@ -8,6 +10,7 @@ export default {
   components: {
     appHeader,
     characterList,
+    appSelect
   },
 
 };
@@ -16,6 +19,7 @@ export default {
 <template>
   <appHeader />
   <main class="orange">
+    <appSelect />
     <characterList />
   </main>
 </template>

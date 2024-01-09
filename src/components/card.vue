@@ -19,6 +19,14 @@ export default {
 
         }
     },
+    computed: {
+        filteredCharacterList() {
+            // Filtra la lista dei personaggi in base all'archetipo selezionato
+            return store.characterList.filter(character => {
+                return store.searchText ? character.type === store.searchText : true;
+            });
+        },
+    },
     created() {
         this.getCharacters()
     }
@@ -28,7 +36,7 @@ export default {
 </script>
 
 <template>
-    <div v-for="(singlecard, id) in store.characterList" :key="id" class="card">
+    <div v-for="(singlecard, id) in filteredCharacterList" :key="id" class="card">
         <img :src="singlecard.card_images[0].image_url" alt="" />
         <h5 class="card-title">{{ singlecard.name }}</h5>
         <p class="card-text">{{ singlecard.type }}</p>
@@ -54,5 +62,6 @@ h5 {
 
 p {
     text-align: center;
+    font-size: 10px;
 }
 </style>

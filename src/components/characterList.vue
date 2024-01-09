@@ -1,11 +1,24 @@
 <script>
+import { store } from '../store';
 import card from './card.vue';
-
 
 export default {
   name: "characterList",
   components: {
-    card
+    card,
+  },
+  data() {
+    return {
+      store,
+    }
+  },
+  computed: {
+    filteredCharacterList() {
+      // Filtra la lista dei personaggi in base all'archetipo selezionato
+      return store.characterList.filter(character => {
+        return store.searchText ? character.type === store.searchText : true;
+      });
+    },
   },
 
 };
@@ -14,7 +27,7 @@ export default {
 
 <template>
   <div class="found">
-    <p>Found ...</p>
+    <p v-if="store.searchText">Numero di carte trovate: {{ filteredCharacterList.length }}</p>
   </div>
   <section class="container">
     <card />

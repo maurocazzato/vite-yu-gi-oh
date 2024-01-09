@@ -3,7 +3,7 @@ import axios from 'axios';
 import { store } from '../store';
 
 export default {
-    name: "card",
+    name: "appselect",
     data() {
         return {
             store,

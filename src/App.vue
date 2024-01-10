@@ -21,6 +21,7 @@ export default {
   <main class="orange">
     <appSelect />
     <characterList />
+
   </main>
 </template>
 
